@@ -1,0 +1,8 @@
+# for use with download_sources.sh
+#
+# lines should contain
+# <url> [optional local filename]
+#
+# whole line comments allowed but inline comments not
+
+http://cms.ncas.ac.uk/documents/xconv/_downloads/xconv1.94_linux_x86_64.tar.gz

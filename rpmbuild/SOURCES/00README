@@ -1,0 +1,20 @@
+When adding sources, either:
+
+1) add the URL (and optional local file name) to the top-level
+   source_urls file -- this will avoid adding the source to the repo
+   for packages readily available from third-party sources, and is the
+   preferred method
+
+2) if this is not possible, then add the source itself to the
+   "sources" directory, and 'git add' it to the repo
+
+Run the get_sources.sh script at the top level. This will download any
+sources from the source_urls to the "downloads" directory (which is in
+.gitignore) apart from any already downloaded, and will create
+symlinks from this directory pointing to all the downloaded sources as
+well as links to all the locally provided sources.
+
+This SOURCES directory is the one used by rpmbuild.  Everything other
+than this 00README file will be ignored by git.  Do not put sources in
+this directory as regular files.
+
