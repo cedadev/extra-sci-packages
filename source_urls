@@ -1,4 +1,4 @@
-# for use with download_sources.sh
+# for use with get_sources.sh
 #
 # lines should contain
 # <url> [optional local filename]
