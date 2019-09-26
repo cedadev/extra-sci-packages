@@ -4,7 +4,7 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1
-Release: 3%{?dist}
+Release: 4%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -72,11 +72,13 @@ Requires: xpdf
 
 # Requires from local CEDA builds (SCL packages)
 
-# when updating this list, also update the build_all.sh script at the top level of the repo
-# with the names of the spec files required to build these
+# when updating this list, also update the build_all.sh script at the
+# top level of the repo with the names of the spec files required to
+# build these
 #
 Requires: %{scl_prefix}mo_unpack >= 2.0.1
 Requires: %{scl_prefix}xconv >= 1.94
+Requires: %{scl_prefix}lxterminal >= 0.3.2
 
 
 %description

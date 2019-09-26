@@ -18,6 +18,11 @@ install_latest ceda-sci-runtime
 install_latest ceda-sci-build
 
 
+# add any build deps
+sudo yum -y install vte-devel intltool  # for lxterminal
+
+
+
 # Now build the software packages.  Names on this list are the file
 # stems of the spec files.
 
@@ -28,6 +33,7 @@ install_latest ceda-sci-build
 for spec_file_prefix in "
     xconv
     mo_unpack
+    lxterminal
 "
 do
     ./build_package.sh --install $spec_file_prefix
