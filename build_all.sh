@@ -36,6 +36,7 @@ for spec_file_prefix in "
     lxterminal
     leafpad
     tkdiff
+    nccmp
 "
 do
     ./build_package.sh --install $spec_file_prefix
