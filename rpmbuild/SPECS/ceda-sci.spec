@@ -81,6 +81,7 @@ Requires: %{scl_prefix}mo_unpack >= 2.0.1
 Requires: %{scl_prefix}xconv >= 1.94
 Requires: %{scl_prefix}lxterminal >= 0.3.2
 Requires: %{scl_prefix}leafpad >= 0.8.18
+Requires: %{scl_prefix}tkdiff >= 4.3.5
 
 
 %description
