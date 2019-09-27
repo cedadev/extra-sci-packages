@@ -52,6 +52,7 @@ Requires: proj-nad
 Requires: proj-static
 Requires: qt-devel
 Requires: redhat-lsb
+Requires: scite
 Requires: sqlite-devel
 Requires: subversion
 Requires: subversion-devel
