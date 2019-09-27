@@ -18,6 +18,7 @@ Requires: ddd
 Requires: emacs
 Requires: emacs-gnuplot
 Requires: geos-devel
+Requires: geany
 Requires: gitk
 Requires: glibc-static
 Requires: gpsbabel
