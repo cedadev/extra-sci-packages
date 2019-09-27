@@ -34,6 +34,7 @@ for spec_file_prefix in "
     xconv
     mo_unpack
     lxterminal
+    leafpad
 "
 do
     ./build_package.sh --install $spec_file_prefix

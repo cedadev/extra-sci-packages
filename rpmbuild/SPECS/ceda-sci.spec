@@ -53,7 +53,6 @@ Requires: proj-nad
 Requires: proj-static
 Requires: qt-devel
 Requires: redhat-lsb
-Requires: scite
 Requires: sqlite-devel
 Requires: subversion
 Requires: subversion-devel
@@ -81,6 +80,7 @@ Requires: xpdf
 Requires: %{scl_prefix}mo_unpack >= 2.0.1
 Requires: %{scl_prefix}xconv >= 1.94
 Requires: %{scl_prefix}lxterminal >= 0.3.2
+Requires: %{scl_prefix}leafpad >= 0.8.18
 
 
 %description
