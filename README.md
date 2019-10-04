@@ -16,7 +16,7 @@ The following packages which were previously supported under JAP are not provide
 
 * CMOR: Owing to the strong version-dependency, we now advise groups requiring CMOR to maintain their own installations so that they can manage the version they wish to use, because the extra-sci-packages does not allow for multiple co-existing versions. (A version is in fact provided in Jaspy although it does not include the development libraries.)
 
-* cmip6-cmor-tables: again because of the strong version dependency, we do not want to include a fixed version as an RPM. Master copies can be found [here](https://github.com/PCMDI/cmip6-cmor-tables). (Users should use the branch of relevance, but copy the `CMIP6_CV.json` file from the `master` branch.) For convenience, we hope to provide local copies in versioned directories for JASMIN users.
+  * cmip6-cmor-tables: again because of the strong version dependency, we do not want to include a fixed version as an RPM. Master copies can be found [here](https://github.com/PCMDI/cmip6-cmor-tables). (Users should use the branch of relevance, but copy the `CMIP6_CV.json` file from the `master` branch.) For convenience, we hope to provide local copies in versioned directories for JASMIN users.
 
 * The ncBrowse netCDF browser has been discontinued ([website](https://www.nodc.noaa.gov/woce/woce_v3/wocedata_1/utils/netcdf/ncbrowse/index.htm) contains stale download link)
 
