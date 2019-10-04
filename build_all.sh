@@ -42,6 +42,7 @@ for spec_file_prefix in "
     ferret-datasets
     hdfeos2
     mtk
+    diffuse
 "
 do
     ./build_package.sh --install $spec_file_prefix

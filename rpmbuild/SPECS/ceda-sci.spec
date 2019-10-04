@@ -88,6 +88,7 @@ Requires: %{scl_prefix}ferret-data >= 7.4-1
 Requires: %{scl_prefix}hdfeos2 >= 20.1.00-1
 Requires: %{scl_prefix}mtk >= 1.4.5-1
 Requires: %{scl_prefix}mtk-devel >= 1.4.5-1
+Requires: %{scl_prefix}diffuse >= 0.4.8-1
 
 
 
