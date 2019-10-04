@@ -1,5 +1,30 @@
 # extra-sci-packages
-A set of RPM packages to supplement Jaspy to provide an scientific analysis environment for CentOS7
+
+A set of RPM packages to supplement Jaspy to provide an scientific analysis environment for CentOS7, principally for use on JASMIN.
+
+To use these packages:
+```
+source /opt/rh/ceda-sci/enable
+```
+
+
+## Removed packages
+
+The following packages which were previously supported under JAP are not provided:
+
+* Any packages provided under Jaspy are not also provided under extra-sci-packages unless it is necessary to do so in order to satisfy a dependency.
+
+* CMOR: Owing to the strong version-dependency, we now advise groups requiring CMOR to maintain their own installations so that they can manage the version they wish to use, because the extra-sci-packages does not allow for multiple co-existing versions. (A version is in fact provided in Jaspy although it does not include the development libraries.)
+
+* The ncBrowse netCDF browser has been discontinued ([website](https://www.nodc.noaa.gov/woce/woce_v3/wocedata_1/utils/netcdf/ncbrowse/index.htm) contains stale download link)
+
+* The EMOS library is marked as deprecated by ECMWF (see note on [website](https://confluence.ecmwf.int//display/EMOS/Emoslib)), as well as the old grib_api interface (see ECMWF's ["end of the road"](https://www.ecmwf.int/en/newsletter/152/news/end-road-grib-api) announcement). The grib_api has been superseded by eccodes, which is provided in Jaspy (and had also been provided in JAP for some time). A version of EMOS _might_ be provided in order to satisfy a dependency from another package, but this should not be relied upon.
+
+* octave-octcdf - the [website](https://octave.sourceforge.io/octcdf/) marks it as obsolete and advises use of the `netcdf` package instead
+
+* thea - the [GitHub repository](https://github.com/SciTools/thea) has been archived and marked as unsupported
+
+* pdftk - this was provided using RPMs supplied by PDF Labs; they have not provided a CentOS 7 version (see [downloads page](https://www.pdflabs.com/docs/install-pdftk-on-redhat-or-centos/))
 
 
 ## Package-specific documentation
