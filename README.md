@@ -32,8 +32,15 @@ The following packages which were previously supported under JAP are not provide
 ## Libraries
 
 Where a package provides a library and associated header files which you wish to use for compilation, it is necessary
-to point to it using the compiler flag `-I/opt/rh/ceda-sci/root/usr/include` 
-and the linker flag `-L/opt/rh/ceda-sci/root/usr/lib64`.  This applies whether the library is a shared or static library.
+to point to it using the compiler flag 
+```
+-I/opt/rh/ceda-sci/root/usr/include
+```
+and the linker flag 
+```
+-L/opt/rh/ceda-sci/root/usr/lib64
+```
+This applies whether the library is a shared or static library.
 
 However, for run-time use of a shared library, the enable script sets `LD_LIBRARY_PATH` so that it will be found
 automatically even though it is in a non-standard location.
