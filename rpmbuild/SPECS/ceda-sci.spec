@@ -89,7 +89,11 @@ Requires: %{scl_prefix}hdfeos2 >= 20.1.00-1
 Requires: %{scl_prefix}mtk >= 1.4.5-1
 Requires: %{scl_prefix}mtk-devel >= 1.4.5-1
 Requires: %{scl_prefix}diffuse >= 0.4.8-1
-
+Requires: %{scl_prefix}libemos >= 4.5.9-1
+Requires: %{scl_prefix}libdrs >= 3.1.2-1
+Requires: %{scl_prefix}libcrayutil >= 20121128-3
+Requires: %{scl_prefix}umutil >= 20130102-4
+Requires: %{scl_prefix}umutil-lib >= 20130102-4
 
 
 %description

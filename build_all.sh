@@ -21,6 +21,7 @@ install_latest ceda-sci-build
 # add any build deps
 sudo yum -y install vte-devel intltool  # for lxterminal
 sudo yum -y install hdf-devel ncompress # for hdfeos2 / mtk
+sudo yum -y install eccodes-devel cmake # for emos (required by umutil)
 
 
 
@@ -43,6 +44,10 @@ for spec_file_prefix in "
     hdfeos2
     mtk
     diffuse
+    emos
+    libdrs
+    libcrayutil
+    umutil
 "
 do
     ./build_package.sh --install $spec_file_prefix
