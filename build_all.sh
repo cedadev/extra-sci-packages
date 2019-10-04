@@ -37,6 +37,8 @@ for spec_file_prefix in "
     leafpad
     tkdiff
     nccmp
+    ferret-bin
+    ferret-datasets
 "
 do
     ./build_package.sh --install $spec_file_prefix

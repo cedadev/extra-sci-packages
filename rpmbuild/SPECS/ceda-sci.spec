@@ -83,6 +83,8 @@ Requires: %{scl_prefix}lxterminal >= 0.3.2
 Requires: %{scl_prefix}leafpad >= 0.8.18
 Requires: %{scl_prefix}tkdiff >= 4.3.5
 Requires: %{scl_prefix}nccmp >= 1.8.3.1
+Requires: %{scl_prefix}ferret >= 7.5.0
+Requires: %{scl_prefix}ferret-data >= 7.4
 
 
 %description
