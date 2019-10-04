@@ -29,7 +29,29 @@ The following packages which were previously supported under JAP are not provide
 * pdftk - this was provided using RPMs supplied by PDF Labs; they have not provided a CentOS 7 version (see [downloads page](https://www.pdflabs.com/docs/install-pdftk-on-redhat-or-centos/))
 
 
+## Libraries
+
+Where a package provides a library and associated header files which you wish to use for compilation, it is necessary
+to point to it using the compiler flag `-I/opt/rh/ceda-sci/root/usr/include` 
+and the linker flag `-L/opt/rh/ceda-sci/root/usr/lib64`.  This applies whether the library is a shared or static library.
+
+However, for run-time use of a shared library, the enable script sets `LD_LIBRARY_PATH` so that it will be found
+automatically even though it is in a non-standard location.
+
+
 ## Package-specific documentation
+
+### Ferret
+
+You should type `source ferret_paths.sh` after enabling the extra-sci-packages, as this
+sets additional ferret-specific environment variables that may be needed.
+
+### Octave
+
+A copy of octave exists in Jaspy, but it is provided also here in order to provide a 
+version which contains the `netcdf` package.  Enable the extra-sci-packages after Jaspy
+to pick this up.
+
 
 ### Misr toolkit python bindings
 
