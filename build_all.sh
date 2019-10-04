@@ -20,6 +20,7 @@ install_latest ceda-sci-build
 
 # add any build deps
 sudo yum -y install vte-devel intltool  # for lxterminal
+sudo yum -y install hdf-devel ncompress # for hdfeos2 / mtk
 
 
 
@@ -39,6 +40,8 @@ for spec_file_prefix in "
     nccmp
     ferret-bin
     ferret-datasets
+    hdfeos2
+    mtk
 "
 do
     ./build_package.sh --install $spec_file_prefix

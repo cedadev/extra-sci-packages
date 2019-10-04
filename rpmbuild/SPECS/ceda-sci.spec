@@ -85,6 +85,10 @@ Requires: %{scl_prefix}tkdiff >= 4.3.5-1
 Requires: %{scl_prefix}nccmp >= 1.8.3.1-1
 Requires: %{scl_prefix}ferret >= 7.5.0-1
 Requires: %{scl_prefix}ferret-data >= 7.4-1
+Requires: %{scl_prefix}hdfeos2 >= 20.1.00-1
+Requires: %{scl_prefix}mtk >= 1.4.5-1
+Requires: %{scl_prefix}mtk-devel >= 1.4.5-1
+
 
 
 %description
