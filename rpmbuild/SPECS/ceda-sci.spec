@@ -4,11 +4,13 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1
-Release: 4%{?dist}
+Release: 5%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
 
+
+Requires: %{scl_prefix}runtime == %{version}-%{release}
 
 # Requires from CentOS / EPEL base (non SCL packages)
 
@@ -113,12 +115,14 @@ meta-package will cause the installation of:
 %package runtime
 Summary: Package that handles %scl Software Collection.
 Requires: scl-utils
+Requires: %{scl_name} == %{version}-%{release}
 
 %description runtime
 Package shipping essential scripts to work with %scl Software Collection.
 
 %package build
 Summary: Package shipping basic build configuration
+Requires: %{scl_name} == %{version}-%{release}
 
 %description build
 Package shipping essential configuration macros to build %scl Software Collection.
@@ -157,6 +161,12 @@ EOF
 %{_root_sysconfdir}/rpm/macros.%{scl}-config
 
 %changelog
+
+# changelog may be incomplete - see history in git
+
+* Fri Nov  1 2019 Builder <builder@builder.ceda.ac.uk> - 1-5
+- direct dependency on exact version of runtime
+
 * Thu Sep 26 2019 Alan Iwi <alan.iwi@stfc.ac.uk> 1-1
 - Initial package
 
