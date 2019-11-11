@@ -4,7 +4,7 @@ A set of RPM packages to supplement Jaspy to provide an scientific analysis envi
 
 To use these packages:
 ```
-source /opt/rh/ceda-sci/enable
+source /opt/rh/jasmin-sci/enable
 ```
 
 
@@ -34,11 +34,11 @@ The following packages which were previously supported under JAP are not provide
 Where a package provides a library and associated header files which you wish to use for compilation, it is necessary
 to point to it using the compiler flag 
 ```
--I/opt/rh/ceda-sci/root/usr/include
+-I/opt/rh/jasmin-sci/root/usr/include
 ```
 and the linker flag 
 ```
--L/opt/rh/ceda-sci/root/usr/lib64
+-L/opt/rh/jasmin-sci/root/usr/lib64
 ```
 This applies whether the library is a shared or static library.
 
@@ -76,8 +76,8 @@ the MTK Python bindings are not supported for Python 3.)
 The following commands are typed at the shell prompt.
 
 ```
-# load ceda-sci tools and Jaspy
-source /opt/rh/ceda-sci/enable
+# load jasmin-sci tools and Jaspy
+source /opt/rh/jasmin-sci/enable
 module load jaspy/2.7
 
 # create and activate a virtual environment
@@ -92,8 +92,8 @@ tar xvfz Mtk-src-1.4.5.tar.gz
 cd MISR-Toolkit-1.4.5/wrappers/python/
 export HDFLIB=/usr/lib64/hdf/
 export HDFINC=/usr/include/hdf/
-export HDFEOS_INC=/opt/rh/ceda-sci/root/usr/include/
-export HDFEOS_LIB=/opt/rh/ceda-sci/root/usr/lib64/
+export HDFEOS_INC=/opt/rh/jasmin-sci/root/usr/include/
+export HDFEOS_LIB=/opt/rh/jasmin-sci/root/usr/lib64/
 ln -s $HDFEOS_LIB/libMisrToolkit.a ../../lib
 export CFLAGS=`python-config --cflags`
 python setup.py install
@@ -105,7 +105,7 @@ The following commands are typed at the shell prompt, except for the example pyt
 
 ```
 # set up the environment
-source /opt/rh/ceda-sci/enable
+source /opt/rh/jasmin-sci/enable
 module load jaspy/2.7
 . my_venv/bin/activate
 

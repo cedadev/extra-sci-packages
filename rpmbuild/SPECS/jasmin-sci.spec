@@ -1,14 +1,14 @@
-%{!?scl:%global scl ceda-sci}
+%{!?scl:%global scl jasmin-sci}
 %scl_package %scl
 
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1
-Release: 5%{?dist}
+Release: 6%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
-
+Obsoletes: ceda-sci
 
 Requires: %{scl_prefix}runtime == %{version}-%{release}
 
@@ -73,7 +73,7 @@ Requires: xorg-x11-util-macros
 Requires: xpdf
 
 
-# Requires from local CEDA builds (SCL packages)
+# Requires from local JASMIN builds (SCL packages)
 
 # when updating this list, also update the build_all.sh script at the
 # top level of the repo with the names of the spec files required to
@@ -104,10 +104,10 @@ software environment.  It is intended to be used in combination with the Jaspy c
 and these RPMs will provide additional packages to supplement Jaspy.  Installing this 
 meta-package will cause the installation of:
 
- 1) a number of software packages built by CEDA, which will install under /opt/rh/ceda-sci
+ 1) a number of software packages built for JASMIN, which will install under /opt/rh/jasmin-sci
     and which will require the following setup command before running them:
 
-        source /opt/rh/ceda-sci/enable
+        source /opt/rh/jasmin-sci/enable
 
  2) a number of software packages from standard repositories, which will install under 
     ordinary system paths
@@ -115,14 +115,15 @@ meta-package will cause the installation of:
 %package runtime
 Summary: Package that handles %scl Software Collection.
 Requires: scl-utils
-Requires: %{scl_name} == %{version}-%{release}
+#Requires: %{scl_name} == %{version}-%{release}
+Obsoletes: ceda-sci-runtime
 
 %description runtime
 Package shipping essential scripts to work with %scl Software Collection.
 
 %package build
 Summary: Package shipping basic build configuration
-Requires: %{scl_name} == %{version}-%{release}
+Requires: %{scl_name}-runtime == %{version}-%{release}
 
 %description build
 Package shipping essential configuration macros to build %scl Software Collection.

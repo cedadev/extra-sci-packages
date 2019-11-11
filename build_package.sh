@@ -81,7 +81,7 @@ buildtmp=_build_tmp.$$
 /usr/bin/time -p -o $time_file_tmp \
     rpmbuild \
         --define "_topdir $topdir" \
-        --define "scl ceda-sci" \
+        --define "scl jasmin-sci" \
         --define "%debug_package %{nil}" \
         -bb $spec_file \
         | tee $buildtmp

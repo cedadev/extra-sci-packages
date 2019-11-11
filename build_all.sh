@@ -13,9 +13,9 @@ install_latest() {
 # build the meta package but initially install the components
 # needed for the build of the software packages
 
-./build_package.sh --no-install ceda-sci
-install_latest ceda-sci-runtime
-install_latest ceda-sci-build
+./build_package.sh --no-install jasmin-sci
+install_latest jasmin-sci-runtime
+install_latest jasmin-sci-build
 
 
 # add any build deps
@@ -29,26 +29,26 @@ sudo yum -y install eccodes-devel cmake # for emos (required by umutil)
 # stems of the spec files.
 
 # When updating this, remember also to update the meta RPM spec 
-# (rpmbuild/specs/ceda-sci.spec) with the names of the packages
+# (rpmbuild/specs/jasmin-sci.spec) with the names of the packages
 # themselves.
 
-for spec_file_prefix in "
-    xconv
-    mo_unpack
-    lxterminal
-    leafpad
-    tkdiff
-    nccmp
-    ferret-bin
-    ferret-datasets
-    hdfeos2
-    mtk
-    diffuse
-    emos
-    libdrs
-    libcrayutil
-    umutil
-"
+for spec_file_prefix in \
+    xconv               \
+    mo_unpack           \
+    lxterminal          \
+    leafpad             \
+    tkdiff              \
+    nccmp               \
+    ferret-bin          \
+    ferret-datasets     \
+    hdfeos2             \
+    mtk                 \
+    diffuse             \
+    emos                \
+    libdrs              \
+    libcrayutil         \
+    umutil              \
+
 do
     ./build_package.sh --install $spec_file_prefix
 done
@@ -56,4 +56,4 @@ done
 #----------------
 # now install the top-level package - should install cleanly if all 
 # dependencies have been satisfied
-install_latest ceda-sci
+install_latest jasmin-sci
