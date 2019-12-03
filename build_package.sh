@@ -6,19 +6,30 @@
 # The command line argument is the file stem of the spec file.
 #
 
-case "$1" in
-    --no-install)
-	install=no
-	shift
-	;;
-    --install)
-	install=yes
-	shift
-	;;
-    *)
-	install=ask
-	;;
-esac
+install=ask
+build_srpm=1
+with=""
+while true
+do
+    case "$1" in
+	--no-install)
+	    install=no
+	    ;;
+	--install)
+	    install=yes
+	    ;;
+	--no-srpm)
+	    build_srpm=0;
+	    ;;
+	--with)
+	    shift
+	    with="$with --with $1"
+	    ;;
+	*)
+	    break
+    esac
+    shift
+done
 
 spec_file_name=$1.spec
 thisdir=`pwd`
@@ -83,6 +94,7 @@ buildtmp=_build_tmp.$$
         --define "_topdir $topdir" \
         --define "scl jasmin-sci" \
         --define "%debug_package %{nil}" \
+	$with \
         -bb $spec_file \
         | tee $buildtmp
     
@@ -101,7 +113,10 @@ then
     # source and binary RPMs in sync (if the build was unsuccessful then 
     # the binary RPM from last successful build was not overwritten so don't update
     # the source RPM)
-    build_srpm $spec_file
+    if [ $build_srpm -eq 1 ]
+    then
+	build_srpm $spec_file
+    fi
 
     if [ $install = ask ]
     then

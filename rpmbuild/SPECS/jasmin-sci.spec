@@ -3,8 +3,8 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1
-Release: 6%{?dist}
+Version: 2
+Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -72,7 +72,6 @@ Requires: xemacs
 Requires: xorg-x11-util-macros
 Requires: xpdf
 
-
 # Requires from local JASMIN builds (SCL packages)
 
 # when updating this list, also update the build_all.sh script at the
@@ -96,6 +95,10 @@ Requires: %{scl_prefix}libdrs >= 3.1.2-1
 Requires: %{scl_prefix}libcrayutil >= 20121128-3
 Requires: %{scl_prefix}umutil >= 20130102-4
 Requires: %{scl_prefix}umutil-lib >= 20130102-4
+
+%if %{?_with_closed_source:1}%{?!_with_closed_source:0}
+Requires: %{scl_prefix}withgroups >= 1.1-1
+%endif
 
 
 %description

@@ -4,15 +4,17 @@ topdir=`dirname $0`
 rpmbuild_dir=$topdir/rpmbuild
 
 # symlink any locally provided sources
-ls $rpmbuild_dir/sources/ | while read name
+for subdir in sources closed_sources
 do
-    link_path=$rpmbuild_dir/SOURCES/$name
-    if [ ! -e $link_path ]
-    then
-	ln -s ../sources/$name $link_path
-    fi
+    ls $rpmbuild_dir/$subdir/ | while read name
+    do
+	link_path=$rpmbuild_dir/SOURCES/$name
+	if [ ! -e $link_path ]
+	then
+	    ln -s ../$subdir/$name $link_path
+	fi
+    done
 done
-
 
 # download and link any other sources
 grep -v '^#' $topdir/source_urls | egrep . | while read url local_name
