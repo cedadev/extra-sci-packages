@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 2
+Version: 1.1
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -14,15 +14,18 @@ Requires: %{scl_prefix}runtime == %{version}-%{release}
 
 # Requires from CentOS / EPEL base (non SCL packages)
 
+Requires: GraphicsMagick-c++
 Requires: atlas
 Requires: atlas-devel
 Requires: ddd
 Requires: emacs
 Requires: emacs-gnuplot
-Requires: geos-devel
+Requires: gcc-gfortran
 Requires: geany
+Requires: geos-devel
 Requires: gitk
 Requires: glibc-static
+Requires: gnuplot
 Requires: gpsbabel
 Requires: grads
 Requires: grass
@@ -60,6 +63,7 @@ Requires: subversion
 Requires: subversion-devel
 Requires: subversion-tools
 Requires: tcl-devel
+Requires: tcsh
 Requires: texlive-dvipng
 Requires: tk-devel
 Requires: tree

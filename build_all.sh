@@ -41,7 +41,7 @@ fi
 
 # remove any existing top-level meta as will prevent updating
 # the runtime (will reinstall it at every end)
-sudo yum -y remove jasmin-sci
+sudo yum -y remove jasmin-sci jasmin-sci-build
 
 # install the runtime/build packages just built
 install_latest jasmin-sci-runtime
