@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.1
+Version: 1.2
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -21,6 +21,7 @@ Requires: ddd
 Requires: emacs
 Requires: emacs-gnuplot
 Requires: gcc-gfortran
+Requires: firefox
 Requires: geany
 Requires: geos-devel
 Requires: gitk
@@ -168,9 +169,13 @@ EOF
 %files build
 %{_root_sysconfdir}/rpm/macros.%{scl}-config
 
+
 %changelog
 
 # changelog may be incomplete - see history in git
+
+* Fri Dec 13 2019 Builder <builder@builder.ceda.ac.uk> - 1.2-1
+- +firefox
 
 * Fri Nov  1 2019 Builder <builder@builder.ceda.ac.uk> - 1-5
 - direct dependency on exact version of runtime
