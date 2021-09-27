@@ -3,7 +3,7 @@
 %{?scl:%scl_package %{_name}}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Version: 0.4.8
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Graphical tool for comparing and merging text files
 
 Group: Development/Tools
@@ -26,6 +26,7 @@ Monotone, Subversion, and SVK repositories for comparison and merging.
 
 %prep
 %setup -q -n %{_name}-%{version}
+perl -p -i -e 's,#!/usr/bin/env python,#!/usr/bin/env python2.7,' src/usr/bin/diffuse
 
 %build
 
@@ -54,6 +55,9 @@ rm -rf %{buildroot}
 %doc AUTHORS ChangeLog COPYING README
 
 %changelog
+* Mon Sep 27 2021 Builder <builder@builder.ceda.ac.uk> - 0.4.8-2
+- put explicit python version in diffuse script
+
 * Fri Oct  4 2019 Builder <builder@builder.ceda.ac.uk> - 0.4.8-1
 - port to CentOS7 / SCL and remove the scrollkeeper stuff
 
