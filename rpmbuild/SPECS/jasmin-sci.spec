@@ -4,7 +4,7 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1.4
-Release: 1pre%{?dist}
+Release: 1pre3%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -32,18 +32,23 @@ Requires: grads
 Requires: grass
 Requires: grass-devel
 Requires: gv
+Requires: htop
 Requires: ksh
 Requires: libRmath
 Requires: libRmath-devel
+Requires: libXaw-devel
 Requires: libcurl-devel
 Requires: libuuid-devel
 Requires: mercurial
+Requires: mesa-dri-drivers
+Requires: nano
 Requires: ncview
 Requires: nedit
 Requires: netcdf-cxx
 Requires: netcdf-cxx-devel
 Requires: netcdf-devel
 Requires: netcdf-fortran-devel
+Requires: netpbm-devel
 Requires: octave
 Requires: octave-devel
 Requires: octave-netcdf
@@ -65,13 +70,15 @@ Requires: subversion-devel
 Requires: subversion-tools
 Requires: tcl-devel
 Requires: tcsh
-Requires: texlive-dvipng
+Requires: texlive-dvipng texlive-pdftex texlive-type1cm texlive-latex-bin texlive-cm-super
 Requires: tk-devel
+Requires: tmux
 Requires: tree
 Requires: udunits2-devel
 Requires: uuid
 Requires: uuid-devel
 Requires: vim-enhanced
+Requires: vim-X11
 Requires: wxGTK-devel
 Requires: xemacs
 Requires: xorg-x11-util-macros
@@ -100,6 +107,9 @@ Requires: %{scl_prefix}libdrs >= 3.1.2-1
 Requires: %{scl_prefix}libcrayutil >= 20121128-3
 Requires: %{scl_prefix}umutil >= 20130102-4
 Requires: %{scl_prefix}umutil-lib >= 20130102-4
+
+# this one not under scl_prefix because it provides a config file used by standard htop package
+Requires: htop_config_jasmin  
 
 %if %{?_with_closed_source:1}%{?!_with_closed_source:0}
 Requires: %{scl_prefix}withgroups >= 1.1-1
