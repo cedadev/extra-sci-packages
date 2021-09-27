@@ -3,8 +3,8 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.2
-Release: 1%{?dist}
+Version: 1.4
+Release: 1pre%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -21,9 +21,9 @@ Requires: ddd
 Requires: emacs
 Requires: emacs-gnuplot
 Requires: gcc-gfortran
-Requires: firefox
 Requires: geany
 Requires: geos-devel
+Requires: git-lfs
 Requires: gitk
 Requires: glibc-static
 Requires: gnuplot
@@ -171,8 +171,10 @@ EOF
 
 
 %changelog
-
 # changelog may be incomplete - see history in git
+
+* Mon Dec 16 2019 Builder <builder@builder.ceda.ac.uk> - 1.3-1
+- -firefox again
 
 * Fri Dec 13 2019 Builder <builder@builder.ceda.ac.uk> - 1.2-1
 - +firefox
