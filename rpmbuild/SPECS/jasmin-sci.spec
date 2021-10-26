@@ -4,7 +4,7 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -108,6 +108,7 @@ Requires: %{scl_prefix}libcrayutil >= 20121128-3
 Requires: %{scl_prefix}umutil >= 20130102-4
 Requires: %{scl_prefix}umutil-lib >= 20130102-4
 Requires: %{scl_prefix}filesystem >= 1.1
+Requires: %{scl_prefix}minio >= 20211007.041958-1
 
 # this one not under scl_prefix because it provides a config file used by standard htop package
 Requires: htop_config_jasmin  
