@@ -4,7 +4,7 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1.4
-Release: 1pre4%{?dist}
+Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
