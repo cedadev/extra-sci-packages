@@ -3,8 +3,8 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.4
-Release: 2%{?dist}
+Version: 1.5
+Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -52,6 +52,7 @@ Requires: netpbm-devel
 Requires: octave
 Requires: octave-devel
 Requires: octave-netcdf
+Requires: openssl-devel
 Requires: p7zip
 Requires: perl-Image-ExifTool
 Requires: perl-core
@@ -70,7 +71,7 @@ Requires: subversion-devel
 Requires: subversion-tools
 Requires: tcl-devel
 Requires: tcsh
-Requires: texlive-dvipng texlive-pdftex texlive-type1cm texlive-latex-bin texlive-cm-super
+Requires: texlive-dvipng texlive-pdftex texlive-type1cm texlive-latex-bin texlive-cm-super texlive-cm
 Requires: tk-devel
 Requires: tmux
 Requires: tree
