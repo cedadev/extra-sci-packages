@@ -82,6 +82,11 @@ fi
 
 buildtmp=_build_tmp.$$
 
+if [ -e ~/.rpmmacros ]
+then
+    mv ~/.rpmmacros ~/.rpmmacros.$$
+fi
+
 #=============
 # With mock would use "mock -r epel-7-x86_64" in place of "rpmbuild"
 # but not is working.  Also mock requires building SRPM first and then 
