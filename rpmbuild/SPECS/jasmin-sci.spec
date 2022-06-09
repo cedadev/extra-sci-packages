@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.6pre1
+Version: 1.6
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -173,13 +173,40 @@ then
 else
    export MANPATH=%{_mandir}:\$MANPATH
 fi
+
+. %{_scl_root}/etc/profile
 EOF
+
+mkdir -p %{buildroot}%{_scl_root}/etc
+cat >> %{buildroot}%{_scl_root}/etc/profile <<EOF
+for i in %{_scl_root}/etc/profile.d/*.sh ; do
+    if [ -r "\$i" ]; then
+       . "\$i" >/dev/null
+    fi
+done
+EOF
+
+cat >> %{buildroot}%{_scl_root}/etc/csh.login <<EOF
+if ( -d %{_scl_root}/etc/profile.d ) then
+    set nonomatch
+    foreach i ( %{_scl_root}/etc/profile.d/*.csh )
+        if ( -r "\$i" ) then
+            source "\$i" >& /dev/null
+        endif
+    end
+    unset i nonomatch
+endif
+EOF
+
+
 %scl_install
 
 %files
 
 %files runtime
 %scl_files
+%{_scl_root}/etc/profile
+%{_scl_root}/etc/csh.login
 
 %files build
 %{_root_sysconfdir}/rpm/macros.%{scl}-config
