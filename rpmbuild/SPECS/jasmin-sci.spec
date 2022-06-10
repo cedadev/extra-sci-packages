@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.6
+Version: 1.6.1
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -18,6 +18,7 @@ Requires: GraphicsMagick-c++
 Requires: atlas
 Requires: atlas-devel
 Requires: ddd
+Requires: ElectricFence
 Requires: emacs
 Requires: emacs-gnuplot
 Requires: gcc-gfortran
@@ -33,6 +34,7 @@ Requires: grass
 Requires: grass-devel
 Requires: gv
 Requires: htop
+Requires: ImageMagick-c++-devel
 Requires: ksh
 Requires: libRmath
 Requires: libRmath-devel
