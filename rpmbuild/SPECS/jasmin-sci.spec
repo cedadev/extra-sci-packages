@@ -4,7 +4,7 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 1.6.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -114,6 +114,7 @@ Requires: %{scl_prefix}filesystem >= 1.1
 Requires: %{scl_prefix}minio >= 20211007.041958-1
 Requires: %{scl_prefix}udunits >= 2.2.28-1
 Requires: %{scl_prefix}nco >= 5.0.7-1
+Requires: %{scl_prefix}ncl >= 6.6.2-1
 
 # this one not under scl_prefix because it provides a config file used by standard htop package
 Requires: htop_config_jasmin  
