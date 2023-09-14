@@ -3,12 +3,13 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.7pre1
+Version: 1.7pre2
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
 Obsoletes: ceda-sci
+Obsoletes: jasmin-sci-nccmp
 
 Requires: %{scl_prefix}runtime == %{version}-%{release}
 
