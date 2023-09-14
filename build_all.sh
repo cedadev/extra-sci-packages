@@ -16,8 +16,8 @@ do
     shift
 done
 
-echo $include_closed_source
-exit
+#echo $include_closed_source
+#exit
 
 install_latest() {
     name=$1
@@ -66,13 +66,11 @@ for spec_file_prefix in \
     lxterminal          \
     leafpad             \
     tkdiff              \
-    nccmp               \
     ferret-bin          \
     ferret-datasets     \
     hdfeos2             \
     mtk                 \
     diffuse             \
-    emos                \
     libdrs              \
     libcrayutil         \
     umutil              \

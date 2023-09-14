@@ -3,8 +3,8 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.6.1
-Release: 2%{?dist}
+Version: 1.7pre1
+Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -36,6 +36,7 @@ Requires: gv
 Requires: htop
 Requires: ImageMagick-c++-devel
 Requires: ksh
+Requires: less
 Requires: libRmath
 Requires: libRmath-devel
 Requires: libXaw-devel
@@ -73,7 +74,7 @@ Requires: subversion-devel
 Requires: subversion-tools
 Requires: tcl-devel
 Requires: tcsh
-Requires: texlive-dvipng texlive-pdftex texlive-type1cm texlive-latex-bin texlive-cm-super texlive-cm
+Requires: texlive-dvipng texlive-pdftex texlive-type1cm texlive-latex-bin texlive-cm-super texlive-cm texlive-epstopdf
 Requires: tk-devel
 Requires: tmux
 Requires: tree
@@ -98,7 +99,6 @@ Requires: %{scl_prefix}xconv >= 1.94-1
 Requires: %{scl_prefix}lxterminal >= 0.3.2-1
 Requires: %{scl_prefix}leafpad >= 0.8.18-1
 Requires: %{scl_prefix}tkdiff >= 4.3.5-1
-Requires: %{scl_prefix}nccmp >= 1.8.3.1-1
 Requires: %{scl_prefix}ferret >= 7.5.0-1
 Requires: %{scl_prefix}ferret-datasets >= 7.4-2
 Requires: %{scl_prefix}hdfeos2 >= 20.1.00-1
