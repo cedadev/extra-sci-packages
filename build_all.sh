@@ -49,7 +49,6 @@ install_latest jasmin-sci-build
 
 
 # add any other build deps
-sudo yum -y install vte-devel intltool  # for lxterminal
 sudo yum -y install hdf-devel ncompress # for hdfeos2 / mtk
 sudo yum -y install eccodes-devel cmake # for emos (required by umutil)
 
@@ -63,7 +62,6 @@ sudo yum -y install eccodes-devel cmake # for emos (required by umutil)
 for spec_file_prefix in \
     xconv               \
     mo_unpack           \
-    lxterminal          \
     leafpad             \
     tkdiff              \
     ferret-bin          \

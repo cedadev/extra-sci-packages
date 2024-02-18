@@ -3,17 +3,17 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.7pre2
+Version: 1.8pre1
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
-Obsoletes: ceda-sci
-Obsoletes: jasmin-sci-nccmp
+#Obsoletes: ceda-sci
+#Obsoletes: jasmin-sci-nccmp
 
 Requires: %{scl_prefix}runtime == %{version}-%{release}
 
-# Requires from CentOS / EPEL base (non SCL packages)
+# Requires from Rocky / EPEL base (non SCL packages)
 
 Requires: GraphicsMagick-c++
 Requires: atlas
@@ -86,6 +86,7 @@ Requires: vim-enhanced
 Requires: vim-X11
 Requires: wxGTK-devel
 Requires: xemacs
+Requires: xfce4-terminal
 Requires: xorg-x11-util-macros
 Requires: xpdf
 
@@ -97,7 +98,6 @@ Requires: xpdf
 #
 Requires: %{scl_prefix}mo_unpack >= 2.0.1-2
 Requires: %{scl_prefix}xconv >= 1.94-1
-Requires: %{scl_prefix}lxterminal >= 0.3.2-1
 Requires: %{scl_prefix}leafpad >= 0.8.18-1
 Requires: %{scl_prefix}tkdiff >= 4.3.5-1
 Requires: %{scl_prefix}ferret >= 7.5.0-1
@@ -143,7 +143,7 @@ meta-package will cause the installation of:
 Summary: Package that handles %scl Software Collection.
 Requires: scl-utils
 #Requires: %{scl_name} == %{version}-%{release}
-Obsoletes: ceda-sci-runtime
+#Obsoletes: ceda-sci-runtime
 
 %description runtime
 Package shipping essential scripts to work with %scl Software Collection.
