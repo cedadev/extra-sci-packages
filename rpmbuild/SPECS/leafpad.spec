@@ -2,7 +2,7 @@
 
 %{?scl:%scl_package %{_name}}
 Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
-Version:        0.8.18
+Version:        0.8.19
 Release:        1%{?dist}
 
 Summary:        GTK+ based simple text editor
@@ -29,6 +29,8 @@ them.
 
 %build
 %configure --enable-chooser
+# unfortunately will not build with -Werror=format-security - remove this flag
+find . -name Makefile | xargs perl -p -i -e 's/-Werror=format-security//g'
 make %{?_smp_mflags}
 cat>>data/leafpad.desktop<<EOF
 StartupNotify=true
@@ -68,6 +70,7 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/applications/*%{_name}.desktop
 %{_datadir}/icons/hicolor/*/*/*
 %{_datadir}/pixmaps/leafpad.*
+%{_mandir}/man1/leafpad.1.gz
 
 %changelog
 * Fri Sep 27 2019 Builder <builder@builder.ceda.ac.uk> - 0.8.18-1
