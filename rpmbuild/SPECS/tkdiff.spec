@@ -3,8 +3,8 @@
 %{?scl:%scl_package %{_name}}
 Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 
-Version: 4.3.5
-%define _version 4-3-5
+Version: 5.6
+%define _version 5-6
 Release: 1%{?dist}
 Source0: %{_name}-%{_version}.zip
 License: GPL v2
