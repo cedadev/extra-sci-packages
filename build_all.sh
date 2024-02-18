@@ -49,6 +49,7 @@ install_latest jasmin-sci-build
 
 
 # add any other build deps
+sudo yum -y install netcdf-devel proj-devel # for mtk
 sudo yum -y install gtk2-devel # for leafpad
 sudo yum -y install hdf-devel ncompress # for hdfeos2 / mtk
 sudo yum -y install eccodes-devel cmake # for emos (required by umutil)
@@ -69,7 +70,6 @@ for spec_file_prefix in \
     ferret-datasets     \
     hdfeos2             \
     mtk                 \
-    diffuse             \
     libdrs              \
     libcrayutil         \
     umutil              \
