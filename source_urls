@@ -49,3 +49,6 @@ https://github.com/nco/nco/archive/refs/tags/5.1.9.tar.gz nco-5.1.9.tar.gz
 https://artifacts.unidata.ucar.edu/repository/downloads-udunits/2.2.28/udunits-2.2.28.tar.gz
 
 https://www.earthsystemgrid.org/dataset/ncl.662.dap/file/ncl_ncarg-6.6.2-CentOS7.6_64bit_gnu485.tar.gz
+
+# old version of eccodes needed to support libemos
+https://confluence.ecmwf.int/download/attachments/45757960/eccodes-2.27.1-Source.tar.gz
