@@ -31,7 +31,8 @@ https://github.com/NOAA-PMEL/FerretDatasets/archive/refs/tags/v7.6.tar.gz Ferret
 https://github.com/nasa/MISR-Toolkit/archive/refs/tags/v1.5.1.tar.gz  Mtk-src-1.5.1.tar.gz
 
 #https://observer.gsfc.nasa.gov/ftp/edhs/hdfeos/latest_release/HDF-EOS2.20v1.00.tar.Z
-https://git.earthdata.nasa.gov/projects/DAS/repos/hdfeos/raw/hdf-eos2-3.0-src.tar.gz
+#https://git.earthdata.nasa.gov/projects/DAS/repos/hdfeos/raw/hdf-eos2-3.0-src.tar.gz
+https://git.earthdata.nasa.gov/projects/DAS/repos/hdfeos/raw/hdf-eos2-3.0-src.tar.gz?at=refs%2Fheads%2FHDFEOS2_3.0 hdf-eos2-3.0-src.tar.gz
 
 https://sourceforge.net/projects/diffuse/files/diffuse/0.4.8/diffuse-0.4.8.tar.bz2/download diffuse-0.4.8.tar.bz2
 

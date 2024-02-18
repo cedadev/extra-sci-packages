@@ -1,12 +1,12 @@
 %define _name hdfeos2
-%define vmaj 20
-%define vmin 1.00
+%define _version 3.0
+%define srcname hdf-eos2-%{version}
 
 %{?scl:%scl_package %{_name}}
 Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Summary: HDF-EOS2 libraries
-Version: %{vmaj}.%{vmin}
-Source0: HDF-EOS2.%{vmaj}v%{vmin}.tar.Z
+Version: %{_version}
+Source0: %{srcname}-src.tar.gz
 Release: 1%{dist}
 License: UNKNOWN
 Group: Scientific support
@@ -28,10 +28,10 @@ files across a wide variety of data products.
 
 %prep
 rm -fr hdfeos
-tar xvfZ %{SOURCE0}
+tar xvfz %{SOURCE0}
 
 %build
-cd hdfeos
+cd %{srcname}
 export CFLAGS="-I/usr/include/hdf -Df2cFortran"
 export LDFLAGS="-L/usr/lib64/hdf" 
 export F77=gfortran
@@ -40,7 +40,7 @@ export FC=gfortran
 make
 
 %install
-cd hdfeos
+cd %{srcname}
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT	
 
