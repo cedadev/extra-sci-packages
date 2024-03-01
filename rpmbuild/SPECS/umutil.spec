@@ -3,7 +3,7 @@
 %{?scl:%scl_package %{_name}}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Version: 20130102
-Release: 4%{?dist}
+Release: 5%{?dist}
 License: NCAS
 Group: Scientific support	
 Source0: umutil-%{version}-pruned.tar.gz
@@ -56,9 +56,10 @@ perl -p -i -l -e '$_ .= " \$\(EXTRA_CPPFLAGS\)" if /^CPPFLAGS=/' Makefile_lib_li
 %define makevars DRSINC=%{scl_inc} UTILINC=%{scl_inc} UTILLIB="-L%{_libdir} -lcrayutil" DRSLIB="-L%{_libdir} -ldrs" UNPACKLIB="-L%{scl_lib} -lemos"
 
 ln -s /usr/include/netcdf.inc ./
-make -f Makefile_lib_linux_x86_64 UMUTILLIB=libumutil.a EXTRA_CPPFLAGS="-I%{scl_inc}"
-make -f %{mymakefile} %{makevars}
-make -f %{mymakefile} test %{makevars}
+make -f Makefile_lib_linux_x86_64 UMUTILLIB=libumutil.a EXTRA_CPPFLAGS="-I%{scl_inc} -fallow-argument-mismatch"
+%define fflags "-O -fallow-argument-mismatch"
+make -f %{mymakefile} %{makevars} FFLAGS=%fflags F90FLAGS=%fflags
+make -f %{mymakefile} test %{makevars} FFLAGS=%fflags F90FLAGS=%fflags
 
 %install			
 
@@ -82,6 +83,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libumutil.a
 
 %changelog
+
+* Fri Mar  1 2024 alan.iwi@stfc.ac.uk  - 20130102-5.
+- Rocky9 build
+
 * Fri Oct  4 2019 Builder <builder@builder.ceda.ac.uk> - 20130102-4.
 - CentOS7 / SCL build
 
