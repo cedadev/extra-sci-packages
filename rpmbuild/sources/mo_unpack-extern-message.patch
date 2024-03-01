@@ -1,0 +1,60 @@
+diff -ru orig/unpack-030712/libmo_unpack/unpack_ppfield.c unpack-030712/libmo_unpack/unpack_ppfield.c
+--- orig/unpack-030712/libmo_unpack/unpack_ppfield.c	2012-05-03 14:50:27.000000000 +0100
++++ unpack-030712/libmo_unpack/unpack_ppfield.c	2024-03-01 14:59:04.641165438 +0000
+@@ -51,7 +51,7 @@
+ 
+ // Message buffer for the syslog interface
+ #define MAX_MESSAGE_SIZE 1024
+-char message[MAX_MESSAGE_SIZE];
++extern char message[MAX_MESSAGE_SIZE];
+ 
+ // DATA field structure interface
+ // unpack the data, calling the correct method based on the lookup associated with it
+diff -ru orig/unpack-030712/libmo_unpack/wgdos_decode_field_parameters.c unpack-030712/libmo_unpack/wgdos_decode_field_parameters.c
+--- orig/unpack-030712/libmo_unpack/wgdos_decode_field_parameters.c	2012-05-03 14:50:27.000000000 +0100
++++ unpack-030712/libmo_unpack/wgdos_decode_field_parameters.c	2024-03-01 14:59:07.537281584 +0000
+@@ -82,7 +82,7 @@
+ #include "logerrors.h"
+ 
+ #define MAX_MESSAGE_SIZE 1024
+-char message[MAX_MESSAGE_SIZE];
++extern char message[MAX_MESSAGE_SIZE];
+ 
+ /* End of header */
+ 
+diff -ru orig/unpack-030712/libmo_unpack/wgdos_decode_row_parameters.c unpack-030712/libmo_unpack/wgdos_decode_row_parameters.c
+--- orig/unpack-030712/libmo_unpack/wgdos_decode_row_parameters.c	2012-05-03 14:50:27.000000000 +0100
++++ unpack-030712/libmo_unpack/wgdos_decode_row_parameters.c	2024-03-01 14:59:09.503360432 +0000
+@@ -80,7 +80,7 @@
+ #include "logerrors.h"
+ 
+ #define MAX_MESSAGE_SIZE 1024
+-char message[MAX_MESSAGE_SIZE];
++extern char message[MAX_MESSAGE_SIZE];
+ /* End of header */
+ 
+ int wgdos_decode_row_parameters(
+diff -ru orig/unpack-030712/libmo_unpack/wgdos_expand_row_to_data.c unpack-030712/libmo_unpack/wgdos_expand_row_to_data.c
+--- orig/unpack-030712/libmo_unpack/wgdos_expand_row_to_data.c	2012-05-03 14:50:27.000000000 +0100
++++ unpack-030712/libmo_unpack/wgdos_expand_row_to_data.c	2024-03-01 14:59:11.921457404 +0000
+@@ -81,7 +81,7 @@
+ #define debug 0
+ 
+ #define MAX_MESSAGE_SIZE 1024
+-char message[MAX_MESSAGE_SIZE];
++extern char message[MAX_MESSAGE_SIZE];
+ 
+ /* End of header */
+ 
+diff -ru orig/unpack-030712/libmo_unpack/wgdos_unpack.c unpack-030712/libmo_unpack/wgdos_unpack.c
+--- orig/unpack-030712/libmo_unpack/wgdos_unpack.c	2012-05-03 14:50:27.000000000 +0100
++++ unpack-030712/libmo_unpack/wgdos_unpack.c	2024-03-01 14:59:23.602925878 +0000
+@@ -96,7 +96,7 @@
+ #include "logerrors.h"
+ 
+ #define MAX_MESSAGE_SIZE 1024
+-char message[MAX_MESSAGE_SIZE];
++extern char message[MAX_MESSAGE_SIZE];
+ /* End of header */
+ 
+ int wgdos_unpack(

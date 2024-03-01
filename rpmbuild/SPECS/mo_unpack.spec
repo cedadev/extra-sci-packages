@@ -3,7 +3,7 @@
 Summary: Met Office PP unpacking library
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:mo_unpack}
 Version: 2.0.1
-Release: 2%{dist}
+Release: 3%{dist}
 License: Copyright Met Office (see contained licence file)
 Packager: Alan Iwi <alan.iwi@stfc.ac.uk>
 Group: Scientific support
@@ -11,6 +11,7 @@ URL: https://puma.nerc.ac.uk/trac/UM_TOOLS/wiki/unpack
 Source0: %{tarname}.tgz
 Source1: mo_unpack-licence
 Patch1: mo_unpack-lib64.patch
+Patch2: mo_unpack-extern-message.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: gcc
 Requires(post): /sbin/ldconfig
@@ -26,6 +27,7 @@ packed PP files.
 %prep
 %setup -n %{tarname}
 %patch1 -p1
+%patch2 -p1
 
 %build
 cd libmo_unpack
@@ -80,5 +82,8 @@ fi
 
 
 %changelog
+* Fri Mar 1 2024  <alan.iwi@stfc.ac.uk> - 2.0.1-3.ceda%{dist}
+- update for Rocky 9
+
 * Thu Oct 31 2013  <builderdev@builder.jc.rl.ac.uk> - 2.0.1-1.ceda%{dist}
 - initial version
