@@ -7,7 +7,7 @@ Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Summary: HDF-EOS2 libraries
 Version: %{_version}
 Source0: %{srcname}-src.tar.gz
-Release: 1%{dist}
+Release: 2%{dist}
 License: UNKNOWN
 Group: Scientific support
 URL: http://hdfeos.org/software
@@ -43,6 +43,8 @@ make
 cd %{srcname}
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT	
+# add extra header files - they are needed by the mtk build
+cp include/*.h gctp/include/*.h $RPM_BUILD_ROOT/%{_includedir}/
 
 %post
 if test `whoami` == root; then
