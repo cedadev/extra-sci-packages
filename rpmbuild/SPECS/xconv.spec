@@ -1,7 +1,7 @@
 %{?scl:%scl_package xconv}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:xconv}
 Version: 1.94
-Release: 1%{?dist}
+Release: 2%{?dist}
 Source0: xconv1.94_linux_x86_64.tar.gz
 License: NCAS
 Group: Scientific support

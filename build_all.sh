@@ -75,6 +75,7 @@ for spec_file_prefix in \
     eccodes-legacy      \
     emos                \
     umutil              \
+    mc                  \
     filesystem
 
 do

@@ -3,8 +3,8 @@
 %{?scl:%scl_package %{_name}}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Summary: An Analysis Tool for Gridded and Non-Gridded Data
-Version: 7.6
-Release: 1%{dist}
+Version: 7.4
+Release: 2%{dist}
 License: OSD - http://ferret.pmel.noaa.gov/Ferret/ferret-legal
 Group: Scientific support
 URL: http://www.ferret.noaa.gov/Ferret/

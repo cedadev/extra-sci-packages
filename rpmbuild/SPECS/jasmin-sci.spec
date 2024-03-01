@@ -19,9 +19,7 @@ Requires: GraphicsMagick-c++
 Requires: atlas
 Requires: atlas-devel
 Requires: ddd
-Requires: ElectricFence
 Requires: emacs
-Requires: emacs-gnuplot
 Requires: gcc-gfortran
 Requires: geany
 Requires: geos-devel
@@ -30,7 +28,6 @@ Requires: gitk
 Requires: glibc-static
 Requires: gnuplot
 Requires: gpsbabel
-Requires: grads
 Requires: grass
 Requires: grass-devel
 Requires: gv
@@ -64,10 +61,7 @@ Requires: perl-devel
 Requires: postgresql-devel
 Requires: proj
 Requires: proj-devel
-Requires: proj-epsg
-Requires: proj-nad
-Requires: proj-static
-Requires: qt-devel
+Requires: qt5-devel
 Requires: redhat-lsb
 Requires: sqlite-devel
 Requires: subversion
@@ -85,7 +79,6 @@ Requires: uuid-devel
 Requires: vim-enhanced
 Requires: vim-X11
 Requires: wxGTK-devel
-Requires: xemacs
 Requires: xfce4-terminal
 Requires: xorg-x11-util-macros
 Requires: xpdf
@@ -96,32 +89,27 @@ Requires: xpdf
 # top level of the repo with the names of the spec files required to
 # build these
 #
-Requires: %{scl_prefix}mo_unpack >= 2.0.1-2
-Requires: %{scl_prefix}xconv >= 1.94-1
-Requires: %{scl_prefix}leafpad >= 0.8.18-1
-Requires: %{scl_prefix}tkdiff >= 4.3.5-1
-Requires: %{scl_prefix}ferret >= 7.5.0-1
+Requires: %{scl_prefix}mo_unpack >= 2.0.1-3
+Requires: %{scl_prefix}xconv >= 1.94-2
+Requires: %{scl_prefix}leafpad >= 0.8.19-1
+Requires: %{scl_prefix}tkdiff >= 5.6-1
+Requires: %{scl_prefix}ferret >= 7.6.0-1
 Requires: %{scl_prefix}ferret-datasets >= 7.4-2
-Requires: %{scl_prefix}hdfeos2 >= 20.1.00-1
-Requires: %{scl_prefix}mtk >= 1.4.5-1
-Requires: %{scl_prefix}mtk-devel >= 1.4.5-1
-Requires: %{scl_prefix}diffuse >= 0.4.8-1
-Requires: %{scl_prefix}libemos >= 4.5.9-1
-Requires: %{scl_prefix}libdrs >= 3.1.2-1
+Requires: %{scl_prefix}hdfeos2 >= 3.0-2
+Requires: %{scl_prefix}mtk >= 1.5.1-1
+Requires: %{scl_prefix}mtk-devel >= 1.5.1-1
+Requires: %{scl_prefix}libemos >= 4.5.9-2
+Requires: %{scl_prefix}libdrs >= 3.1.2-2
 Requires: %{scl_prefix}libcrayutil >= 20121128-3
-Requires: %{scl_prefix}umutil >= 20130102-4
-Requires: %{scl_prefix}umutil-lib >= 20130102-4
+Requires: %{scl_prefix}umutil >= 20130102-5
+Requires: %{scl_prefix}umutil-lib >= 20130102-5
 Requires: %{scl_prefix}filesystem >= 1.1
-Requires: %{scl_prefix}minio >= 20211007.041958-1
-Requires: %{scl_prefix}udunits >= 2.2.28-1
-Requires: %{scl_prefix}nco >= 5.0.7-1
-Requires: %{scl_prefix}ncl >= 6.6.2-1
+Requires: %{scl_prefix}minio >= 20211007.041958-2
 
-# this one not under scl_prefix because it provides a config file used by standard htop package
-Requires: htop_config_jasmin  
+
 
 %if %{?_with_closed_source:1}%{?!_with_closed_source:0}
-Requires: %{scl_prefix}withgroups >= 1.1-1
+Requires: %{scl_prefix}withgroups >= 1.1-2
 %endif
 
 

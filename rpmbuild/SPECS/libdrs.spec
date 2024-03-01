@@ -3,7 +3,7 @@
 %{?scl:%scl_package %{_name}}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Version: 3.1.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: check with PCMDI
 Group: Scientific support	
 Source: %{_name}-%{version}.tar.gz

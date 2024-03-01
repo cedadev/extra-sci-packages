@@ -3,7 +3,7 @@
 %{?scl:%scl_package %{_name}}
 Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 
-Version: 5.0.7
+Version: 5.1.9
 Release: 1%{?dist}
 License: GPL v3
 Group: Scientific support	

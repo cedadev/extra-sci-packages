@@ -4,7 +4,7 @@
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Summary: A utility to change the current groups including during non-interactive workflows
 Version: 1.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Applications/System
 Source0: %{_name}-v%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(111, root, -) %{_bindir}/%{exe}
 
 %changelog
+* Fri Mar 1 2024 alan.iwi@stfc.ac.uk
+- Rocky 9 build
+
 * Fri Nov 15 2019 Builder <builder@builder.ceda.ac.uk> - 
 - Initial build.
 
