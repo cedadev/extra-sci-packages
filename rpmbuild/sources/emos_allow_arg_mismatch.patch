@@ -1,0 +1,11 @@
+diff -ru orig/libemos-4.5.9-Source/CMakeLists.txt new/libemos-4.5.9-Source/CMakeLists.txt
+--- orig/libemos-4.5.9-Source/CMakeLists.txt	2018-02-16 13:29:59.000000000 +0000
++++ new/libemos-4.5.9-Source/CMakeLists.txt	2024-02-18 17:47:21.747774528 +0000
+@@ -65,6 +65,7 @@
+ # build type flags
+ if(CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
+   ecbuild_add_fortran_flags("-ffixed-line-length-none -fcray-pointer -fno-second-underscore -Wuninitialized -Wunused-variable -DSHAREDMEMORY")
++  ecbuild_add_fortran_flags("-fallow-argument-mismatch")
+   ecbuild_add_fortran_flags("-O2 -mtune=native" BUILD RELEASE)
+   ecbuild_add_fortran_flags("-O2 -mtune=native" BUILD RELWITHDEBINFO)
+   ecbuild_add_fortran_flags("-g"                BUILD RELWITHDEBINFO)
