@@ -3,7 +3,7 @@
 %{?scl:%scl_package %{_name}}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Summary: MISR Toolkit
-Version: 1.4.5
+Version: 1.5.1
 Release: 1%{dist}
 License: MISR Toolkit License http://www.openchannelfoundation.org/project/print_license.php?group_id=354&license_id=31
 Group: Scientific support
@@ -21,6 +21,7 @@ Packager: alan.iwi@stfc.ac.uk
 # add explicit provides line because autodeps notices that the shared library is required
 # but when using SCL, does not notice that it is also provided
 Provides: libMisrToolkit.so()(64bit)
+
 
 %description
 
@@ -77,6 +78,9 @@ export HDFEOS_LIB=%{?scl:%{_scl_root}}/usr/lib64/
 export HDFLIB=/usr/lib64/hdf/
 export HDFINC=/usr/include/hdf/
 
+# unfortunately will not build with -Werror - remove this flag
+find . -name Makefile | xargs perl -p -i -e 's/-Werror\s/ /g'
+
 make
 
 %install
@@ -91,9 +95,18 @@ mv $MTK_INSTALLDIR/doc $RPM_BUILD_ROOT%{_docdir}
 mv $MTK_INSTALLDIR/examples $RPM_BUILD_ROOT%{_docdir}/examples
 mv $MTK_INSTALLDIR/lib $RPM_BUILD_ROOT%{_libdir}
 
+# in the examples/python directory, the scripts are python2, so rename
+# *.py to *.py2 to prevent rpmbuild from trying to byte-compile them
+# and then aborting the build when it fails (the RPM macros I found
+# online that allegedly prevent byte-compiling, or that prevent
+# failures from terminating the build, didn't seem to work)
+cd $RPM_BUILD_ROOT%{_docdir}/examples/python/
+for f in *.py ; do mv $f ${f}2; done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+
 
 
 %files
@@ -108,6 +121,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*.a
 
 %changelog
+
+* Fri Mar 1 2024 alan.iwi@stfc.ac.uk - 1.5.1-1%{dist}
+- Rocky 9 version
 
 * Fri Oct  4 2019 Builder <builder@builder.ceda.ac.uk> - 1.4.5-1%{dist}
 - bump version and build for CentOS7/SCL, omitting python wrappers
