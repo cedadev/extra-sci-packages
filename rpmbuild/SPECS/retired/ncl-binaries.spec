@@ -48,6 +48,14 @@ mkdir -p $RPM_BUILD_ROOT/`dirname %{profile_sh}`
 echo "setenv NCARG_ROOT %{root}" > $RPM_BUILD_ROOT/%{profile_csh}
 echo "NCARG_ROOT=%{root} ; export NCARG_ROOT" > $RPM_BUILD_ROOT/%{profile_sh}
 
+
+# Rename some .py files to .py2 to prevent rpmbuild from trying to
+# byte-compile them and then aborting the build.
+# This is quite old software and it is not our job to fix it properly.
+cd $RPM_BUILD_ROOT/%{?scl:%{_scl_root}}/usr/lib/ncarg/nclex/nug/
+for f in *.py ; do mv $f ${f}2; done
+
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
