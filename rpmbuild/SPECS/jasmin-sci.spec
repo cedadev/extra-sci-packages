@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 1.8pre1
+Version: 1.8
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -62,7 +62,6 @@ Requires: postgresql-devel
 Requires: proj
 Requires: proj-devel
 Requires: qt5-devel
-Requires: redhat-lsb
 Requires: sqlite-devel
 Requires: subversion
 Requires: subversion-devel
@@ -94,7 +93,7 @@ Requires: %{scl_prefix}xconv >= 1.94-2
 Requires: %{scl_prefix}leafpad >= 0.8.19-1
 Requires: %{scl_prefix}tkdiff >= 5.6-1
 Requires: %{scl_prefix}ferret >= 7.6.0-1
-Requires: %{scl_prefix}ferret-datasets >= 7.4-2
+Requires: %{scl_prefix}ferret-datasets >= 7.6-1
 Requires: %{scl_prefix}hdfeos2 >= 3.0-2
 Requires: %{scl_prefix}mtk >= 1.5.1-1
 Requires: %{scl_prefix}mtk-devel >= 1.5.1-1

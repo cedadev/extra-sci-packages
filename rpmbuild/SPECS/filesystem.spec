@@ -4,7 +4,7 @@
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Summary: Package that owns various directories under %scl
 Version: 1.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 BuildArch: noarch
 License: GPLv2+
 
