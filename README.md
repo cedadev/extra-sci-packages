@@ -28,6 +28,29 @@ The following packages which were previously supported under JAP are not provide
 
 * pdftk - this was provided using RPMs supplied by PDF Labs; they have not provided a CentOS 7 version (see [downloads page](https://www.pdflabs.com/docs/install-pdftk-on-redhat-or-centos/))
 
+### Packages dropped in 1.8 (first Rocky 9 release)
+
+The following packages were installed from standard CentOS7 repositories, but have been dropped because they are not available in the standard Rocky9 repository.  Adding these would require local builds; they could be considered if there are requests from multiple users.
+
+ - ElectricFence
+ - emacs-gnuplot
+ - grads
+ - proj-epsg
+ - proj-nad
+ - proj-static
+ - qt-devel
+ - xemacs
+
+The following packages that were already using local builds have now been dropped.
+
+ - lxterminal - xfce4-terminal from standard repo has been provided instead with similar functionality
+
+ - diffuse - this is a python 2 package so cannot be supported on Rocky 9
+
+ - NCO - now back in latest Jaspy, so not needed in jasmin-sci
+ - udunits - now in Jaspy - was only provided in order to compile NCO
+
+ - NCL - This is discontinued software as explained at https://www.ncl.ucar.edu/Document/Pivot_to_Python/ (the release used precompiled executables from NCAR; no Rocky 9 version available; the CentOS7 version is not compatible with Rocky 9). geocat-viz has been added to Jaspy as a replacement.
 
 ## Libraries
 
