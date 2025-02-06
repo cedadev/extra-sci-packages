@@ -3,8 +3,8 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 2.4
-Release: 3%{?dist}
+Version: 2.5
+Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
 BuildRequires: scl-utils-build
@@ -42,6 +42,7 @@ Requires: libRmath-devel
 Requires: libXaw-devel
 Requires: libcurl-devel
 Requires: libuuid-devel
+Requires: mc
 Requires: mercurial
 Requires: mesa-dri-drivers
 Requires: nano
@@ -62,10 +63,12 @@ Requires: patch
 Requires: perl-Image-ExifTool
 Requires: perl-core
 Requires: perl-devel
+Requires: perl-Switch
 Requires: postgresql-devel
 Requires: proj
 Requires: proj-devel
 Requires: qt5-devel
+Requires: s3cmd
 Requires: screen
 Requires: singularity-ce
 Requires: sqlite-devel
