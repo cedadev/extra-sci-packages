@@ -1,8 +1,8 @@
 %{?scl:%scl_package minio}
 Name: %{?scl_pkg_name}%{?!scl_pkg_name:minio}
-Version: 20211007.041958
-Release: 2%{?dist}
-Source0: mc
+Version: 20250721.083541
+Release: 1%{?dist}
+Source0: mc.RELEASE.2025-08-13T08-35-41Z
 License: Affero GPL v3
 Group: Scientific support
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot

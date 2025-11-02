@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 2.5
+Version: 2.6
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -17,6 +17,7 @@ Requires: %{scl_prefix}runtime == %{version}-%{release}
 
 Requires: atlas
 Requires: atlas-devel
+Requires: bison
 Requires: ddd
 Requires: emacs
 Requires: gcc-gfortran
@@ -42,6 +43,8 @@ Requires: libRmath-devel
 Requires: libXaw-devel
 Requires: libcurl-devel
 Requires: libuuid-devel
+# mc is the "midnight commander" and is distinct from minio client 
+# which is also provided (see under local builds, the exe is here renamed minio)
 Requires: mc
 Requires: mercurial
 Requires: mesa-dri-drivers
@@ -68,6 +71,7 @@ Requires: postgresql-devel
 Requires: proj
 Requires: proj-devel
 Requires: qt5-devel
+Requires: rclone
 Requires: s3cmd
 Requires: screen
 Requires: singularity-ce
@@ -77,6 +81,7 @@ Requires: subversion-devel
 Requires: subversion-tools
 Requires: tcl-devel
 Requires: tcsh
+Requires: tesseract
 Requires: texlive-dvipng texlive-pdftex texlive-type1cm texlive-latex-bin texlive-cm-super texlive-cm texlive-epstopdf
 Requires: tk-devel
 Requires: tmpwatch
@@ -88,6 +93,7 @@ Requires: uuid-devel
 Requires: vim-enhanced
 Requires: vim-X11
 Requires: wgrib
+Requires: wgrib2
 Requires: wxGTK-devel
 Requires: xfce4-terminal
 Requires: xorg-x11-util-macros
@@ -103,7 +109,7 @@ Requires: xterm
 Requires: %{scl_prefix}mo_unpack >= 2.0.1-3
 Requires: %{scl_prefix}xconv >= 1.94-2
 Requires: %{scl_prefix}leafpad >= 0.8.19-1
-Requires: %{scl_prefix}tkdiff >= 5.6-1
+Requires: %{scl_prefix}tkdiff >= 6.0-1
 Requires: %{scl_prefix}ferret >= 7.6.0-1
 Requires: %{scl_prefix}ferret-datasets >= 7.6-1
 Requires: %{scl_prefix}hdfeos2 >= 3.0-2
@@ -115,8 +121,8 @@ Requires: %{scl_prefix}libcrayutil >= 20121128-3
 Requires: %{scl_prefix}umutil >= 20130102-5
 Requires: %{scl_prefix}umutil-lib >= 20130102-5
 Requires: %{scl_prefix}filesystem >= 1.1-5
-Requires: %{scl_prefix}minio >= 20211007.041958-2
-Requires: %{scl_prefix}saga >= 9.3.2-1
+Requires: %{scl_prefix}minio >= 20250721.083541-1
+Requires: %{scl_prefix}saga >= 9.10.0-1
 Requires: %{scl_prefix}xdiskusage >= 1.60-1
 Requires: %{scl_prefix}eccodes2_27 >= 2.27.1-2
 

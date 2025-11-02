@@ -2,7 +2,7 @@
 
 %{?scl:%scl_package %{_name}}
 Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
-Version:        9.3.2
+Version:        9.10.0
 Release:        1%{?dist}
 Summary:        GTK+ based simple text editor
 Group:          Scientific support
@@ -37,10 +37,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %{_datadir}/saga
 %{_mandir}/man1/saga*
-%{_datadir}/applications/saga.desktop
+%{_datadir}/applications/org.saga_gis.saga_gui.desktop
 %{_datadir}/pixmaps/saga.png
 %{_datadir}/icons/hicolor/*/apps/saga.png
-%{_datadir}/metainfo/org.saga-gis.saga-gui.appdata.xml
+%{_datadir}/metainfo/org.saga_gis.saga_gui.appdata.xml
 %{_libdir}/libsaga*
 %{_libdir}/saga
 %{_includedir}/saga
