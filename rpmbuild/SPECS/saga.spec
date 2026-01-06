@@ -3,7 +3,7 @@
 %{?scl:%scl_package %{_name}}
 Name:           %{?scl_pkg_name}%{?!scl_pkg_name:%{_name}}
 Version:        9.10.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        GTK+ based simple text editor
 Group:          Scientific support
 License:        GPL

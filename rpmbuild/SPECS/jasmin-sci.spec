@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 2.6
+Version: 2.7
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -122,7 +122,7 @@ Requires: %{scl_prefix}umutil >= 20130102-5
 Requires: %{scl_prefix}umutil-lib >= 20130102-5
 Requires: %{scl_prefix}filesystem >= 1.1-5
 Requires: %{scl_prefix}minio >= 20250721.083541-1
-Requires: %{scl_prefix}saga >= 9.10.0-1
+Requires: %{scl_prefix}saga >= 9.10.0-2
 Requires: %{scl_prefix}xdiskusage >= 1.60-1
 Requires: %{scl_prefix}eccodes2_27 >= 2.27.1-2
 
