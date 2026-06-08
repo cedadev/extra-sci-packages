@@ -3,7 +3,7 @@
 
 Summary: Package that installs %scl
 Name: %scl_name
-Version: 2.7
+Version: 2.8
 Release: 1%{?dist}
 BuildArch: noarch
 License: GPLv2+
@@ -21,6 +21,7 @@ Requires: bison
 Requires: ddd
 Requires: emacs
 Requires: gcc-gfortran
+Requires: gdl
 Requires: geany
 Requires: geos-devel
 Requires: git-lfs
